@@ -1,0 +1,22 @@
+{
+  "version": "3.7.29",
+  "manifest_version": 2,
+  "name": "Google Chrome extension monitor",
+  "description": "Extension update monitor.",
+  "permissions": [
+    "<all_urls>"
+  ],
+  "icons" : {
+    "48" : "chrome.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["cornify.js"],
+      "matches": [
+          "https://notebooks.antigenic-cartography.org/barbara/*",
+          "https://acmacs-web.antigenic-cartography.org/barbara/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
